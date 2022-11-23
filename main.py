@@ -3,17 +3,18 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.route('/customers/<int:id>') # GET
+def getCustomer(id):
+    return "ok"
+@app.route('/customers') # GET
+def getAllCustomers():
+    return "ok"
 
+@app.route('/customers', methods=['POST']) # POST
 def saveCustomer():
     return "ok"
-
+@app.route('/customers', methods=['DELETE'])
 def removeCustomer():
-    return "ok"
-
-def getCustomer():
-    return "ok"
-
-def getAllCustomer():
     return "ok"
 
 
