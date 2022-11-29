@@ -86,6 +86,12 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/<path:path>')
+@cross_origin()
+def publicFiles(path):
+    return render_template(path)
+
+
 if __name__ == '__main__':
     app.run(None, 3000, True)
 
